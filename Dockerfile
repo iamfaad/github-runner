@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -y curl jq git sudo docker.io ca-certificates && \
+    apt-get install -y curl jq git sudo docker ca-certificates && \
     apt-get clean
 
 # Set runner version
