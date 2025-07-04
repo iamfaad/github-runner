@@ -10,7 +10,7 @@ RUN apt-get update && \
 ENV RUNNER_VERSION=2.325.0
 
 # Create user and directories
-RUN useradd -m runner && mkdir -p /actions-runner && chown runner:runner /actions-runner && usermod -aG 988 runner
+RUN useradd -m runner && mkdir -p /actions-runner && chown runner:runner /actions-runner && usermod -aG docker runner
 # RUN mkdir -p /actions-runner 
 WORKDIR /actions-runner
 
