@@ -25,5 +25,5 @@ RUN ./bin/installdependencies.sh
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-USER runner
+USER root
 ENTRYPOINT ["/entrypoint.sh"]
