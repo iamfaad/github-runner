@@ -23,13 +23,14 @@ cd /actions-runner
 # Configure the runner
 ./config.sh --unattended \
   --url "https://github.com/iamfaad/odoo-18" \
-  --token "AJG6HYHXBMB4QZ6O4MG6KMLIM4R7M" \
+  --token "AJG6HYGJSPSNBMDSJ6MUKITIM74Q6" \
   --name "image-builder" \
-  --work "/" \
+  --work "/actions-runner" \
   --replace
+  
 cleanup() {
   echo "Removing runner..."
-  ./config.sh remove --unattended --token "AJG6HYHXBMB4QZ6O4MG6KMLIM4R7M"
+  ./config.sh remove --unattended --token "./config.sh --url https://github.com/iamfaad/odoo-18 --token AJG6HYGJSPSNBMDSJ6MUKITIM74Q6"
 }
 
 trap 'cleanup; exit 130' INT
