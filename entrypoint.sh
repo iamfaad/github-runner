@@ -12,16 +12,24 @@ WORKDIR=${RUNNER_WORKDIR:-/_work}
 cd /actions-runner
 
 # Configure the runner
-./config.sh --unattended \
-  --url "$REPO_URL" \
-  --token "$RUNNER_TOKEN" \
-  --name "$RUNNER_NAME" \
-  --work "$WORKDIR" \
-  --replace
+#./config.sh --unattended \
+#  --url "$REPO_URL" \
+#  --token "$RUNNER_TOKEN" \
+#  --name "$RUNNER_NAME" \
+#  --work "$WORKDIR" \
+#  --replace
 
+
+# Configure the runner
+./config.sh --unattended \
+  --url "https://github.com/iamfaad/odoo-18" \
+  --token "AJG6HYHXBMB4QZ6O4MG6KMLIM4R7M" \
+  --name "image-builder" \
+  --work "/" \
+  --replace
 cleanup() {
   echo "Removing runner..."
-  ./config.sh remove --unattended --token "$RUNNER_TOKEN"
+  ./config.sh remove --unattended --token "AJG6HYHXBMB4QZ6O4MG6KMLIM4R7M"
 }
 
 trap 'cleanup; exit 130' INT
