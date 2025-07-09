@@ -24,7 +24,7 @@ cd /actions-runner
 ./config.sh --unattended \
   --url "$REPO_URL" \
   --token "$RUNNER_TOKEN" \
-  --name "$NAME \
+  --name "$NAME" \
   --work "/actions-runner" \
   --replace
   
